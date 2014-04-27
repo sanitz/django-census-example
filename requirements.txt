@@ -1,0 +1,5 @@
+Django==1.6.3
+django-debug-toolbar==1.2
+flake8==2.1.0
+ipython==2.0.0
+factory_boy==2.3.1
