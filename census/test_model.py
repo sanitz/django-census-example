@@ -2,7 +2,10 @@ from django.test import TestCase
 
 from .models import Citizen
 
+import pytest
 
+
+@pytest.mark.django_db
 class TestCitizen(TestCase):
     def setUp(self):
         Citizen(name='Grace', age=66).save()

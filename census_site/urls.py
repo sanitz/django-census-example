@@ -5,6 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'census.views.home', name='home'),
+    url(r'^$', 'census.views.home'),
     url(r'^admin/', include(admin.site.urls)),
 )
