@@ -1,18 +1,18 @@
-from django.test import TestCase
-
+import pytest
+from . import Census
 from .models import Citizen
 
-import pytest
+
+@pytest.fixture
+def census():
+    return Census([
+        Citizen(name='Grace', age=66),
+        Citizen(name='Guido', age=42)])
 
 
-@pytest.mark.django_db
-class TestCitizen(TestCase):
-    def setUp(self):
-        Citizen(name='Grace', age=66).save()
-        Citizen(name='Guido', age=42).save()
+def test_sum(census):
+    assert census.sum() == 2
 
-    def test_sum(self):
-        self.assertEquals(Citizen.objects.count(), 2)
 
-    def test_median(self):
-        self.assertEquals(Citizen.objects.median(), 54.0)
+def test_median_age(census):
+    assert census.median_age() == 54.0
