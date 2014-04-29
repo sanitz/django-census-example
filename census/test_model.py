@@ -14,5 +14,5 @@ def test_sum(census):
     assert census.sum() == 2
 
 
-def test_median_age(census):
-    assert census.median_age() == 54.0
+def test_average_age(census):
+    assert census.average_age() == 54.0

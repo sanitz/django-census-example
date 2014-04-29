@@ -5,5 +5,5 @@ class Census(object):
     def sum(self):
         return len(self.citizens)
 
-    def median_age(self):
+    def average_age(self):
         return sum([c.age for c in self.citizens]) / self.sum()

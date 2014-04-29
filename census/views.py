@@ -8,4 +8,4 @@ def home(request):
     census = Census(Citizen.objects.all())
     return render(request, 'census.html',
                   {'sum': census.sum(),
-                   'median': census.median_age()})
+                   'average_age': census.average_age()})
