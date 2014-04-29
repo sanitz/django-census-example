@@ -6,4 +6,4 @@ from .models import Citizen
 def home(request):
     return render(request, 'census.html',
                   {'sum': Citizen.objects.count(),
-                   'median': Citizen.objects.median()})
+                   'average_age': Citizen.objects.average_age()})

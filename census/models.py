@@ -3,7 +3,7 @@ from django.db import models
 
 
 class CitizenManager(models.Manager):
-    def median(self):
+    def average_age(self):
         all_citizen = self.all()
         if not all_citizen:
             return 0

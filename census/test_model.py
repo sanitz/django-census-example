@@ -14,5 +14,5 @@ class TestCitizen(TestCase):
     def test_sum(self):
         self.assertEquals(Citizen.objects.count(), 2)
 
-    def test_median(self):
-        self.assertEquals(Citizen.objects.median(), 54.0)
+    def test_average_age(self):
+        self.assertEquals(Citizen.objects.average_age(), 54.0)
